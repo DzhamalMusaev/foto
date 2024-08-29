@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотографирование</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Сфотографируйтесь!</h1>
+    <video id="video" width="320" height="240" autoplay></video>
+    <button id="snap">Сделать снимок</button>
+    <canvas id="canvas" width="320" height="240" style="display: none;"></canvas>
+    <form id="photo-form" action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="photo" id="photo">
+        <button type="submit">Отправить фотографию</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+<script> src="js/server.js" </script>
+</html>
